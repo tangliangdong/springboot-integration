@@ -20,7 +20,8 @@ import java.util.Map;
 @RequestMapping("open")
 public class OpenController {
 
-//    private RestTemplate restTemplate;
+    @Autowired
+    private RestTemplate restTemplate;
 //
 //    @Autowired
 //    private OpenController(RestTemplate restTemplate){
@@ -32,8 +33,8 @@ public class OpenController {
         Map<String, Object> map = new HashMap<>();
 //        String response = restTemplate.postForObject("/open/index", map, String.class);
 
-        RestTemplate restTemplate = new RestTemplate();
-        String response = restTemplate.getForObject("http://localhost:8002/open/index", String.class);
+//        RestTemplate restTemplate = new RestTemplate();
+        String response = restTemplate.getForObject("http://SERVER-01:8002/open/index", String.class);
 
         System.out.println(response);
         return response;

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class OpenController {
 
     @GetMapping("index")
-    public String index(){
+    public String index() {
         System.out.println("你好世界");
         return "hello world";
     }

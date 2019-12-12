@@ -15,7 +15,7 @@ import java.time.Duration;
  * @data 2019/12/12
  * @time 14:19
  */
-@Component
+@Configuration
 public class RestTemplateConfig {
 
     @LoadBalanced
